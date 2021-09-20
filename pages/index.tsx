@@ -1,12 +1,15 @@
-import { Container } from '@components/ui'
+import { Navbar } from '@components/shared'
 import type { NextPage } from 'next'
+import Head from 'next/head'
 
 const Home: NextPage = () => {
   return (
     <div className="min-h-screen bg-gray-100">
-      <Container>
-        <h1 className="font-bold text-2xl text-gray-800">It works</h1>
-      </Container>
+      <Head>
+        <title>Personal Site(work in progress...)</title>
+      </Head>
+      <Navbar />
+      <div style={{ height: '2040px' }}></div>
     </div>
   )
 }
