@@ -33,7 +33,10 @@ const Hero: React.FC<HeroProps> = ({ headline, description, socialLinks }) => {
           {socialLinks.map((link) => (
             <a
               key={link.href}
-              className="flex items-center cursor-pointer hover:underline"
+              href={link.href}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center cursor-pointer hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2"
             >
               <span>{link.icon}</span>
               <span className="text-xs pl-3 pr-2 font-sans font-light">
