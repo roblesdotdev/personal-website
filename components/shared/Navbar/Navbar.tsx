@@ -14,7 +14,7 @@ const Navbar: React.FC<NavbarProps> = () => {
       <Container className="flex-1 flex justify-between items-center">
         {/* LOGO */}
         <Link href="/">
-          <a className="font-bold p-2">
+          <a className="font-bold p-2 font-sans">
             AR<span className="text-gray-400">.</span>
           </a>
         </Link>

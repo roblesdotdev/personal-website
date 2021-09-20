@@ -22,8 +22,12 @@ const Hero: React.FC<HeroProps> = ({ headline, description, socialLinks }) => {
           />
         </div>
         {/* Description */}
-        <h1 className="text-2xl font-bold text-center mb-4">{headline}</h1>
-        <p className="text-center font-light text-lg">{description}</p>
+        <h1 className="text-2xl font-sans font-black text-center mb-4">
+          {headline}
+        </h1>
+        <p className="text-center font-serif font-light text-lg leading-relaxed">
+          {description}
+        </p>
         {/* Social */}
         <div className="flex space-x-6 mt-16">
           {socialLinks.map((link) => (
@@ -32,7 +36,9 @@ const Hero: React.FC<HeroProps> = ({ headline, description, socialLinks }) => {
               className="flex items-center cursor-pointer hover:underline"
             >
               <span>{link.icon}</span>
-              <span className="text-xs pl-3 pr-2">{link.label}</span>
+              <span className="text-xs pl-3 pr-2 font-sans font-light">
+                {link.label}
+              </span>
               <ExternalLink className="h-3 w-3 opacity-75" />
             </a>
           ))}
