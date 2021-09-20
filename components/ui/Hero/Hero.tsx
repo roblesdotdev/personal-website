@@ -12,13 +12,17 @@ const Hero: React.FC<HeroProps> = ({ headline, description, socialLinks }) => {
       <Container className="flex flex-col items-center">
         {/* Image */}
         <div
-          className="w-16 h-16 border-2 border-gray-800 rounded-full mb-6"
+          className="border-2 border-gray-800 rounded-full mb-6 flex items-center justify-center"
           style={{ padding: '2px' }}
         >
           <Image
             alt="Me"
             src={profilePic}
-            className="object-cover rounded-full"
+            className="rounded-full"
+            objectFit="cover"
+            width="64"
+            height="64"
+            priority
           />
         </div>
         {/* Description */}
