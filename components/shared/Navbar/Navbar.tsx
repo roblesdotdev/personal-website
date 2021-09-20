@@ -8,7 +8,7 @@ import Link from 'next/link'
 const Navbar: React.FC<NavbarProps> = () => {
   return (
     <header
-      className="flex items-center sticky top-0 border-b-2 text-gray-600"
+      className="flex items-center sticky top-0 border-b-2 text-gray-600 bg-gray-100"
       style={{ minHeight: '64px' }}
     >
       <Container className="flex-1 flex justify-between items-center">
