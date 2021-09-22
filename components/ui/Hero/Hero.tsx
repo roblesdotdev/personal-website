@@ -7,7 +7,7 @@ import { Container, SocialLink } from '..'
  **/
 const Hero: React.FC<HeroProps> = ({ headline, description, socialLinks }) => {
   return (
-    <div className="py-16">
+    <div className="py-16 border-b-2 border-gray-200">
       <Container className="flex flex-col items-center">
         {/* Image */}
         <div
