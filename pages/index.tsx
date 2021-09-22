@@ -1,11 +1,10 @@
 import { ArticleCard } from '@components/articles'
 import { Twitter, Github } from '@components/icons'
 import { Footer, Navbar } from '@components/shared'
-import { Container, Hero } from '@components/ui'
+import { AppLink, Container, Hero, SocialLink, ELink } from '@components/ui'
 import { fakePosts } from 'data'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
@@ -41,10 +40,25 @@ const Home: NextPage = () => {
           </div>
           <p className="text-center text-sm font-light text-gray-700 py-12">
             Read all the articles{' '}
-            <Link href="/blog">
-              <a className="font-medium">on the blog</a>
-            </Link>
+            <AppLink href="/blog" className="font-bold">
+              on the blog
+            </AppLink>
           </p>
+        </Container>
+      </section>
+      <section className="py-12 bg-gray-200">
+        <Container className="flex flex-col justify-center items-center space-y-8">
+          <p className="text-center font-normal text-sm text-gray-700">
+            This site was created with{' '}
+            <ELink href="https://nextjs.org/">nextjs</ELink>,{' '}
+            <ELink href="https://tailwindcss.com/">tailwindcss </ELink>and{' '}
+            <ELink href="https://www.typescriptlang.org/">typescript</ELink>.
+          </p>
+          <SocialLink
+            href="https://github.com/roblesdotdev"
+            label="View Source"
+            icon={<Github />}
+          />
         </Container>
       </section>
       <div style={{ height: '2040px' }}></div>
