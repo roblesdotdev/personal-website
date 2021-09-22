@@ -1,5 +1,5 @@
 import { Twitter, Github } from '@components/icons'
-import { Navbar } from '@components/shared'
+import { Footer, Navbar } from '@components/shared'
 import { Hero } from '@components/ui'
 import type { NextPage } from 'next'
 import Head from 'next/head'
@@ -29,6 +29,7 @@ const Home: NextPage = () => {
         ]}
       />
       <div style={{ height: '2040px' }}></div>
+      <Footer />
     </div>
   )
 }
