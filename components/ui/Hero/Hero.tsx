@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import profilePic from '@assets/images/profile.png'
-import { ExternalLink } from '@components/icons'
-import { Container } from '..'
+import { Container, SocialLink } from '..'
 
 /**
  * Hero
@@ -35,19 +34,12 @@ const Hero: React.FC<HeroProps> = ({ headline, description, socialLinks }) => {
         {/* Social */}
         <div className="flex space-x-6 mt-16">
           {socialLinks.map((link) => (
-            <a
+            <SocialLink
               key={link.href}
               href={link.href}
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center cursor-pointer hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2"
-            >
-              <span>{link.icon}</span>
-              <span className="text-xs pl-3 pr-2 font-sans font-light">
-                {link.label}
-              </span>
-              <ExternalLink className="h-3 w-3 opacity-75" />
-            </a>
+              label={link.label}
+              icon={link.icon}
+            />
           ))}
         </div>
       </Container>
